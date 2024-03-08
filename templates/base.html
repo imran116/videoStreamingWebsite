@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Streaming Website</title>
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'video_list' %}">Video Streaming Website</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'video_list' %}">Home</a></li>
+                <li><a href="{% url 'video_search' %}">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Video Streaming Website</p>
+    </footer>
+</body>
+</html>

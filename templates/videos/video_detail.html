@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ video.title }}</h1>
+<iframe width="560" height="315" src="{{ video.youtube_link }}" frameborder="0" allowfullscreen></iframe>
+<p>{{ video.description }}</p>
+<!-- Add feedback form here if required -->
+{% endblock %}

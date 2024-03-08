@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Search Results</h1>
+<form method="get">
+    <input type="text" name="q" placeholder="Search videos">
+    <button type="submit">Search</button>
+</form>
+<ul>
+    {% for video in videos %}
+        <li><a href="{% url 'video_detail' video.pk %}">{{ video.title }}</a></li>
+    {% empty %}
+        <li>No videos found matching your search.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
